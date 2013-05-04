@@ -7,12 +7,12 @@ body {
 	background: #FFFFFF; 
 }
 #wrapper{
-	width:721px;
+	width:820px;
 	margin:0 auto;
 }
 /*---------------------- points table styling ----------------------------*/
 #pointsTable {
-	width:500px;
+	width:550px;
 	caption-side:bottom;
 	border-collapse:collapse;
 	border-spacing:0;
@@ -154,7 +154,7 @@ background-image: -moz-linear-gradient(
 }
 /*-------------- end points table tyling -----------------*/
 #fixturesTable {
-	width:700px;
+	width:800px;
 	margin-top:10px;
 }
 
@@ -168,14 +168,14 @@ background-image: -moz-linear-gradient(
 }
 #fixturesTable tr:nth-child(odd) {
 	color:#000;
-	background:#eee;
+	background:#ccc;
 }
 #fixturesTable tr:nth-child(even) {
 	color:#666;
 }
 #fixtures {
 	height:300px;
-	width:720px;
+	//width:800px;
 	overflow:scroll;
 }
 /*---------------------------------------------*/
