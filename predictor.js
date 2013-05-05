@@ -699,13 +699,14 @@ function takeScreenshot(){
     w.document.write('Uploading...');
     // upload to imgur using jquery/CORS
     // https://developer.mozilla.org/En/HTTP_access_control
+     
     $.ajax({
         url: 'http://api.imgur.com/2/upload.json',
         type: 'POST',
         data: {
             type: 'base64',
             // get your key here, quick and fast http://imgur.com/register/api_anon
-            key: 'YOUR-API-KEY',
+            key: 'fd708d3b10cb640a4a5509b6d2ff6b4ab436c19e',
             name: 'neon.jpg',
             title: 'test title',
             caption: 'test caption',
@@ -718,7 +719,7 @@ function takeScreenshot(){
         alert('Could not reach api.imgur.com. Sorry :(');
         w.close();
     });
-
+    
     // end 
     }
     });

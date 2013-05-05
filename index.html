@@ -16,7 +16,7 @@
 <body>
 <div id="wrapper">
  <div id="head">
-            <table id="pointsTable" border="0" cellspacing="0" cellpadding="5" onclick="takeScreenshot();">
+            <table id="pointsTable" border="0" cellspacing="0" cellpadding="5">
              <caption>
     			Top four Qualify for the Play-offs
  			 </caption>
@@ -122,7 +122,7 @@
             
           
 <p class="hotspot" onmouseover="tooltip.show('<strong>IPL Playoffs Predictor</strong><br/>select the team to win from the list below and the points table updates automatically<br/>note: you can select only once if you want to select another team hit the reset button below ', 400);" onmouseout="tooltip.hide();">Read me first!</p>
-      
+ <input id="resetButton" type="button" value="Take screenshot" onclick="takeScreenshot();"  />    
 <form autocomplete="off" >
 <input id="resetButton" type="reset" value="reset" onclick="window.location.reload()" /> 
 </div>
