@@ -684,6 +684,7 @@ window.onload = function() {
 };
 
 function takeScreenshot(){
+
     console.log("take screenshot function");
     tableCanvas = document.getElementById("pointsTable");
     html2canvas(tableCanvas,{
@@ -695,6 +696,8 @@ function takeScreenshot(){
     } catch(e) {
         var img = canvas.toDataURL().split(',')[1];
     }
+
+    $('.screenshot').first().val("uploading");
     //ajax
     var fd = new FormData(); 
     fd.append("image", img); 
@@ -704,10 +707,13 @@ function takeScreenshot(){
         
         var link = JSON.parse(xhr.responseText).data.link;
         prompt("image link" ,link);
+        $('.screenshot').first().val("Take Screenshot");
 
     }
     xhr.setRequestHeader('Authorization', 'Client-ID ddaebf76a4cf924');
     xhr.send(fd);
+
+
     // ajax end 
     }
     });
