@@ -684,6 +684,7 @@ window.onload = function() {
 };
 
 function takeScreenshot(){
+    console.log("take screenshot function");
     tableCanvas = document.getElementById("pointsTable");
     html2canvas(tableCanvas,{
         onrendered : function(canvas) {
@@ -695,7 +696,6 @@ function takeScreenshot(){
         var img = canvas.toDataURL().split(',')[1];
     }
     //ajax
-    alert("uploading...");
     var fd = new FormData(); 
     fd.append("image", img); 
     var xhr = new XMLHttpRequest(); 
