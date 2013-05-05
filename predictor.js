@@ -694,33 +694,21 @@ function takeScreenshot(){
     } catch(e) {
         var img = canvas.toDataURL().split(',')[1];
     }
-    // open the popup in the click handler so it will not be blocked
-    var w = window.open();
-    w.document.write('Uploading...');
-    // upload to imgur using jquery/CORS
-    // https://developer.mozilla.org/En/HTTP_access_control
-     
-    $.ajax({
-        url: 'http://api.imgur.com/2/upload.json',
-        type: 'POST',
-        data: {
-            type: 'base64',
-            // get your key here, quick and fast http://imgur.com/register/api_anon
-            key: 'fd708d3b10cb640a4a5509b6d2ff6b4ab436c19e',
-            name: 'neon.jpg',
-            title: 'test title',
-            caption: 'test caption',
-            image: img
-        },
-        dataType: 'json'
-    }).success(function(data) {
-        w.location.href = data['upload']['links']['imgur_page'];
-    }).error(function() {
-        alert('Could not reach api.imgur.com. Sorry :(');
-        w.close();
-    });
-    
-    // end 
+    //ajax
+    alert("uploading...");
+    var fd = new FormData(); 
+    fd.append("image", img); 
+    var xhr = new XMLHttpRequest(); 
+    xhr.open("POST", "https://api.imgur.com/3/image.json");
+    xhr.onload = function() {
+        
+        var link = JSON.parse(xhr.responseText).data.link;
+        prompt("image link" ,link);
+
+    }
+    xhr.setRequestHeader('Authorization', 'Client-ID ddaebf76a4cf924');
+    xhr.send(fd);
+    // ajax end 
     }
     });
 }
