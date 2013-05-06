@@ -111,7 +111,7 @@ function initVars() {
     };
     teams[3] = {
         "name": "Kings XI Punjab",
-        "won": 4,
+        "won": 5,
         "lost": 6,
         "tie":0
     };
@@ -142,7 +142,7 @@ function initVars() {
     teams[8] = {
         "name": "Royal Challengers Bangalore",
         "won": 7,
-        "lost": 4,
+        "lost": 5,
         "tie":0
     };
     teams[9] = {
