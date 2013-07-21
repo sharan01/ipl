@@ -1,6 +1,4 @@
 /*---------------------- tool tip ------------------*/
-//author: Michael Leigeber
-//website: http://http://sixrevisions.com
 
 var tooltip=function(){
  var id = 'tt';
@@ -99,56 +97,56 @@ teams = [];
 function initVars() {
     teams[1] = {
         "name": "Chennai Super Kings",
-        "won": 11,
-        "lost": 4,
+        "won": 9,
+        "lost": 3,
         "tie":0
     };
     teams[2] = {
         "name": "Delhi Daredevils",
         "won": 3,
-        "lost": 11,
+        "lost": 8,
         "tie":0
     };
     teams[3] = {
         "name": "Kings XI Punjab",
-        "won": 6,
-        "lost": 8,
+        "won": 4,
+        "lost": 6,
         "tie":0
     };
     teams[4] = {
         "name": "Kolkata Knight Riders",
-        "won": 6,
-        "lost": 9,
+        "won": 4,
+        "lost": 7,
         "tie":0
     };
     teams[5] = {
         "name": "Mumbai Indians",
-        "won": 11,
+        "won": 7,
         "lost": 4,
         "tie":0
     };
     teams[6] = {
         "name": "Pune Warriors",
-        "won": 3,
-        "lost": 12,
+        "won": 2,
+        "lost": 9,
         "tie":0
     };
     teams[7] = {
         "name": "Rajasthan Royals",
-        "won": 10,
-        "lost": 5,
+        "won": 6,
+        "lost": 4,
         "tie":0
     };
     teams[8] = {
         "name": "Royal Challengers Bangalore",
-        "won": 8,
-        "lost": 7,
+        "won": 7,
+        "lost": 4,
         "tie":0
     };
     teams[9] = {
         "name": "Sun Risers Hyderabad",
-        "won": 8,
-        "lost": 6,
+        "won": 7,
+        "lost": 4,
         "tie":0
     };
 }
