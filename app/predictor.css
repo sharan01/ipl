@@ -1,0 +1,455 @@
+@charset "utf-8";
+/* CSS Document */
+/*  */
+body {
+	font-family: "trebuchet MS", georgia, sans-serif;
+	margin:0;
+	background: #FFFFFF; 
+}
+#wrapper{
+	width:820px;
+	margin:0 auto;
+}
+/*---------------------- points table styling ----------------------------*/
+#pointsTable {
+	width:550px;
+	caption-side:bottom;
+	border-collapse:collapse;
+	border-spacing:0;
+	float:left;
+	empty-cells:hide;
+}
+
+#pointsTable th:nth-child(3),#pointsTable th:nth-child(4),#pointsTable th:nth-child(5),#pointsTable th:nth-child(6),#pointsTable th:nth-child(7){
+	text-align:left;
+	font-size:.9em;
+	color:#fff;
+	background: #000;
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.2, rgb(0,0,0)),
+    color-stop(0.53, rgb(61,61,61)),
+    color-stop(0.83, rgb(91,94,94))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(0,0,0) 20%,
+    rgb(61,61,61) 53%,
+    rgb(91,94,94) 83%
+);
+}
+#pointsTable th:nth-child(3) {
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+#pointsTable th:nth-child(7) {
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.top4 td:first-child {
+	border-radius:5px;
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(204,204,204)),
+    color-stop(0, rgb(217,216,214)),
+    color-stop(0.85, rgb(247,247,247))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(204,204,204) 0%,
+    rgb(217,216,214) 0%,
+    rgb(247,247,247) 85%
+);
+	
+}
+.rest td:first-child {
+	border-radius:5px;
+	color:#fff;
+	background:#000;
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(87,85,87)),
+    color-stop(0.54, rgb(115,115,115)),
+    color-stop(1, rgb(179,179,179))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(87,85,87) 0%,
+    rgb(115,115,115) 54%,
+    rgb(179,179,179) 100%
+);
+
+	
+}
+.top4 td:nth-child(2) {
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.top4 td:nth-child(7) {
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+.top4 td:nth-child(2), .top4 td:nth-child(3), .top4 td:nth-child(4), .top4 td:nth-child(5), .top4 td:nth-child(6), .top4 td:nth-child(7){
+	color:#fff;
+	background:#000;
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(87,85,87)),
+    color-stop(0.54, rgb(115,115,115)),
+    color-stop(1, rgb(179,179,179))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(87,85,87) 0%,
+    rgb(115,115,115) 54%,
+    rgb(179,179,179) 100%
+);
+
+}
+.rest td:nth-child(2), .rest td:nth-child(3), .rest td:nth-child(4), .rest td:nth-child(5), .rest td:nth-child(6), .rest td:nth-child(7) {
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(204,204,204)),
+    color-stop(0, rgb(217,216,214)),
+    color-stop(0.85, rgb(247,247,247))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(204,204,204) 0%,
+    rgb(217,216,214) 0%,
+    rgb(247,247,247) 85%
+);
+}
+.rest td:nth-child(7) {
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+#pointsTable caption{
+	color:#ddd;
+	background:#000;
+	border-radius:5px;
+	background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(87,85,87)),
+    color-stop(0.54, rgb(115,115,115)),
+    color-stop(1, rgb(179,179,179))
+);
+background-image: -moz-linear-gradient(
+    center bottom,
+    rgb(87,85,87) 0%,
+    rgb(115,115,115) 54%,
+    rgb(179,179,179) 100%
+);
+}
+/*-------------- end points table tyling -----------------*/
+#fixturesTable {
+	width:800px;
+	margin-top:10px;
+}
+
+#fixturesTable  td:first-child {
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+#fixturesTable  td:last-child {
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+#fixturesTable tr:nth-child(odd) {
+	color:#000;
+	background:#ccc;
+}
+#fixturesTable tr:nth-child(even) {
+	color:#666;
+}
+#fixtures {
+	height:300px;
+	//width:800px;
+	overflow:scroll;
+}
+/*---------------------------------------------*/
+#sidebar{
+	float:right;
+}
+.clear{
+	clear:both;
+}
+#home{
+	position:absolute;
+	top:-17px;
+	left:50px;
+	width:50px;
+	display:block;
+	font-size: 14px;
+	text-align:center;
+	text-decoration:none;
+	color: #ccc;
+	padding: 20px 5px 5px 5px;
+	background: -moz-linear-gradient(
+		top,
+		#bab8b4 0%,
+		#242323);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#bab8b4),
+		to(#242323));
+	border-radius: 9px;
+	-moz-border-radius: 9px;
+	-webkit-border-radius: 9px;
+	-moz-box-shadow:
+		0px 2px 3px rgba(008,008,008,0.5),
+		inset 0px 0px 10px rgba(217,213,208,0.7);
+	-webkit-box-shadow:
+		0px 2px 3px rgba(008,008,008,0.5),
+		inset 0px 0px 10px rgba(217,213,208,0.7);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.4),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+#home:hover{
+	color:#fff;
+}
+#logo{
+	display:block;
+	opacity:0.6;
+	margin-top:15px;
+	margin-right:90px;
+	padding-left:20px;
+}
+h1 {
+	font-size:16px;
+	text-align:center;
+	margin-right:70px;
+	
+}
+.hotspot{
+	margin-top:35px;
+	color:#ccc;
+	font-family:Verdana, Geneva, sans-serif;
+	font-weight:bold;
+	font-size:18px;
+	//margin-bottom:20px;
+	text-shadow:1px 1px 5px #000000;
+}
+#screenButton{
+
+}
+#resetButton {
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		font: 14px/100% Arial, Helvetica, sans-serif;
+		padding: 2px 20px 2px;
+		text-shadow: 0 1px 1px rgba(0,0,0,.3);
+		-webkit-border-radius: .5em; 
+		-moz-border-radius: .5em;
+		border-radius: .5em;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		color: #fef4e9;
+		border: solid 1px #da7c0c;
+		background: #f78d1d;
+		background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+		background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+		margin-left:30px;
+		margin-bottom: 5px;
+	}
+	#resetButton:hover{
+		text-decoration: none;
+		background: #f47c20;
+		background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+		background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	}
+	#resetButton:active{
+		position: relative;
+		top: 1px;
+		color: #fcd3a5;
+		background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+		background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	}
+
+/*-----------------------tool tip --------------------*/
+
+ #tt {
+ position:absolute;
+ display:block;
+ background: rgba(0, 0, 0, 0.4);
+ }
+ #tttop {
+ display:block;
+ height:5px;
+ margin-left:5px;
+ background: rgba(0, 0, 0, 0.6);
+ overflow:hidden;
+ }
+ #ttcont {
+ display:block;
+ padding:2px 12px 3px 7px;
+ margin-left:5px;
+ background: rgba(0, 0, 0, 0.4);
+ color:#fff;
+ }
+#ttbot {
+display:block;
+height:5px;
+margin-left:5px;
+background: rgba(0, 0, 0, 0.4);
+overflow:hidden;
+}
+/* ------ scroll bar -----*/
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 100%;
+	border-radius:8px;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar *
+{
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack{
+	background:#E9E9E9;
+	position: relative;
+	border-radius:8px;
+}
+
+.jspDrag
+{
+	background:#888;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	border-radius:8px;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}
+/*twitter and facebook*/
+#twitter{
+	position:absolute;
+	top:100px;
+	left:30px;
+}
+#facebook{
+	position:absolute;
+	top:140px;
+	left:30px;
+}
+/*-------------scrollbar for chrome  ----------*/
+	::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+	}
+	::-webkit-scrollbar-track-piece {
+    background:#eee;
+	}
+	::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+	background:#999;
+    -webkit-border-radius: 3px;
+	
+	}
+	::-webkit-scrollbar-thumb:horizontal {
+    width: 50px;
+    background-color: #eee;
+    -webkit-border-radius: 3px;
+	}
