@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IPL Playoffs Predictor</title>
+<link rel="stylesheet" href="predictor.css" type="text/css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="html2canvas.js"></script>
+<script src="predictor.js" type="text/javascript" ></script>
+
+
+
+</head>
+
+<body>
+<div id="wrapper">
+ <div id="head">
+            <table id="pointsTable" border="0" cellspacing="0" cellpadding="5">
+             <caption>
+    			Top four Qualify for the Play-offs
+ 			 </caption>
+             <thead>
+                <tr id="tableHead">
+                	<th scope="col"></th>
+                    <th scope="col"></th>
+                    <th  scope="col">PLD</th>
+                    <th  scope="col">WON</th>
+                    <th  scope="col">LOST</th>
+                    <th  scope="col">TIE</th>
+                    <th  scope="col">PTS</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr class="top4">
+                    <td> 1</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr class="top4">
+                    <td>2 </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr class="top4">
+                    <td>3 </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr class="top4">
+                    <td> 4</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                 <tr class="rest">
+                    <td> 5</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                 <tr class="rest">
+                    <td> 6</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                 <tr class="rest">
+                    <td>7 </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                 <tr class="rest">
+                    <td>8 </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                 
+              </tbody>
+            </table>
+            <div id="sidebar">
+            <img src="logo.png" alt="IPL Playoffs" name="logo" id="logo"/>
+            <h1>IPL<br/>Playoffs<br/>Predictor</h1>
+            
+          
+<p class="hotspot" onmouseover="tooltip.show('<strong>IPL Playoffs Predictor</strong><br/>select the team to win from the list below and the points table updates automatically<br/>note: you can select only once if you want to select another team hit the reset button below ', 400);" onmouseout="tooltip.hide();">Read me first!</p>
+ <input id="resetButton"  class="screenshot" style="margin-left:0px" type="button" value="Take screenshot" onclick="takeScreenshot();"  />    
+<form autocomplete="off" >
+<input id="resetButton" type="reset" value="reset" onclick="window.location.reload()" /> 
+</div>
+<br class="clear"/>
+</div> 
+ <div id="fixtures" class="scroll-pane">
+<table id="fixturesTable" border="0" cellspacing="0" cellpadding="2" >  
+   
+    
+   <tr>
+      <td>Mon May 5</td>
+
+      <td>25th match - Rajasthan T20 v Kolkata T20</td>
+
+      <td>RR</td>
+
+      <td><input name=" 25" onclick="newValues('fd');" type="radio" value=
+      "RR"></td>
+
+      <td>KKR</td>
+
+      <td><input name=" 25" onclick="newValues('df');" type="radio" value=
+      "KKR"></td>
+    </tr>
+
+    <tr>
+      <td>Mon May 5</td>
+
+      <td>26th match - Delhi T20 v Chennai T20</td>
+
+      <td>DD</td>
+
+      <td><input name=" 26" onclick="newValues('ba');" type="radio" value=
+      "DD"></td>
+
+      <td>CSK</td>
+
+      <td><input name=" 26" onclick="newValues('ab');" type="radio" value=
+      "CSK"></td>
+    </tr>
+
+    <tr>
+      <td>Tue May 6</td>
+
+      <td>27th match - Mumbai T20 v Bangalore T20</td>
+
+      <td>MI</td>
+
+      <td><input name=" 27" onclick="newValues('eg');" type="radio" value=
+      "MI"></td>
+
+      <td>RCB</td>
+
+      <td><input name=" 27" onclick="newValues('ge');" type="radio" value=
+      "RCB"></td>
+    </tr>
+
+    <tr>
+      <td>Wed May 7</td>
+
+      <td>28th match - Delhi T20 v Kolkata T20</td>
+
+      <td>DD</td>
+
+      <td><input name=" 28" onclick="newValues('bd');" type="radio" value=
+      "DD"></td>
+
+      <td>KKR</td>
+
+      <td><input name=" 28" onclick="newValues('db');" type="radio" value=
+      "KKR"></td>
+    </tr>
+
+    <tr>
+      <td>Wed May 7</td>
+
+      <td>29th match - Punjab T20 v Chennai T20</td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 29" onclick="newValues('ca');" type="radio" value=
+      "KXIP"></td>
+
+      <td>CSK</td>
+
+      <td><input name=" 29" onclick="newValues('ac');" type="radio" value=
+      "CSK"></td>
+    </tr>
+
+    <tr>
+      <td>Thu May 8</td>
+
+      <td>30th match - Rajasthan T20 v Hyderabad T20</td>
+
+      <td>RR</td>
+
+      <td><input name=" 30" onclick="newValues('fh');" type="radio" value=
+      "RR"></td>
+
+      <td>SRH</td>
+
+      <td><input name=" 30" onclick="newValues('hf');" type="radio" value=
+      "SRH"></td>
+    </tr>
+
+    <tr>
+      <td>Fri May 9</td>
+
+      <td>31st match - Bangalore T20 v Punjab T20</td>
+
+      <td>RCB</td>
+
+      <td><input name=" 31" onclick="newValues('gc');" type="radio" value=
+      "RCB"></td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 31" onclick="newValues('cg');" type="radio" value=
+      "KXIP"></td>
+    </tr>
+
+    <tr>
+      <td>Sat May 10</td>
+
+      <td>32nd match - Delhi T20 v Hyderabad T20</td>
+
+      <td>DD</td>
+
+      <td><input name=" 32" onclick="newValues('bh');" type="radio" value=
+      "DD"></td>
+
+      <td>SRH</td>
+
+      <td><input name=" 32" onclick="newValues('hb');" type="radio" value=
+      "SRH"></td>
+    </tr>
+
+    <tr>
+      <td>Sat May 10</td>
+
+      <td>33rd match - Mumbai T20 v Chennai T20</td>
+
+      <td>MI</td>
+
+      <td><input name=" 33" onclick="newValues('ea');" type="radio" value=
+      "MI"></td>
+
+      <td>CSK</td>
+
+      <td><input name=" 33" onclick="newValues('ae');" type="radio" value=
+      "CSK"></td>
+    </tr>
+
+    <tr>
+      <td>Sun May 11</td>
+
+      <td>34th match - Punjab T20 v Kolkata T20</td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 34" onclick="newValues('cd');" type="radio" value=
+      "KXIP"></td>
+
+      <td>KKR</td>
+
+      <td><input name=" 34" onclick="newValues('dc');" type="radio" value=
+      "KKR"></td>
+    </tr>
+
+    <tr>
+      <td>Sun May 11</td>
+
+      <td>35th match - Bangalore T20 v Rajasthan T20</td>
+
+      <td>RCB</td>
+
+      <td><input name=" 35" onclick="newValues('gf');" type="radio" value=
+      "RCB"></td>
+
+      <td>RR</td>
+
+      <td><input name=" 35" onclick="newValues('fg');" type="radio" value=
+      "RR"></td>
+    </tr>
+
+    <tr>
+      <td>Mon May 12</td>
+
+      <td>36th match - Hyderabad T20 v Mumbai T20</td>
+
+      <td>SRH</td>
+
+      <td><input name=" 36" onclick="newValues('he');" type="radio" value=
+      "SRH"></td>
+
+      <td>MI</td>
+
+      <td><input name=" 36" onclick="newValues('eh');" type="radio" value=
+      "MI"></td>
+    </tr>
+
+    <tr>
+      <td>Tue May 13</td>
+
+      <td>37th match - Chennai T20 v Rajasthan T20</td>
+
+      <td>CSK</td>
+
+      <td><input name=" 37" onclick="newValues('af');" type="radio" value=
+      "CSK"></td>
+
+      <td>RR</td>
+
+      <td><input name=" 37" onclick="newValues('fa');" type="radio" value=
+      "RR"></td>
+    </tr>
+
+    <tr>
+      <td>Tue May 13</td>
+
+      <td>38th match - Bangalore T20 v Delhi T20</td>
+
+      <td>RCB</td>
+
+      <td><input name=" 38" onclick="newValues('gb');" type="radio" value=
+      "RCB"></td>
+
+      <td>DD</td>
+
+      <td><input name=" 38" onclick="newValues('bg');" type="radio" value=
+      "DD"></td>
+    </tr>
+
+    <tr>
+      <td>Wed May 14</td>
+
+      <td>39th match - Hyderabad T20 v Punjab T20</td>
+
+      <td>SRH</td>
+
+      <td><input name=" 39" onclick="newValues('hc');" type="radio" value=
+      "SRH"></td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 39" onclick="newValues('ch');" type="radio" value=
+      "KXIP"></td>
+    </tr>
+
+    <tr>
+      <td>Wed May 14</td>
+
+      <td>40th match - Kolkata T20 v Mumbai T20</td>
+
+      <td>KKR</td>
+
+      <td><input name=" 40" onclick="newValues('de');" type="radio" value=
+      "KKR"></td>
+
+      <td>MI</td>
+
+      <td><input name=" 40" onclick="newValues('ed');" type="radio" value=
+      "MI"></td>
+    </tr>
+
+    <tr>
+      <td>Thu May 15</td>
+
+      <td>41st match - Rajasthan T20 v Delhi T20</td>
+
+      <td>RR</td>
+
+      <td><input name=" 41" onclick="newValues('fb');" type="radio" value=
+      "RR"></td>
+
+      <td>DD</td>
+
+      <td><input name=" 41" onclick="newValues('bf');" type="radio" value=
+      "DD"></td>
+    </tr>
+
+    <tr>
+      <td>Sun May 18</td>
+
+      <td>42nd match - Chennai T20 v Bangalore T20</td>
+
+      <td>CSK</td>
+
+      <td><input name=" 42" onclick="newValues('ag');" type="radio" value=
+      "CSK"></td>
+
+      <td>RCB</td>
+
+      <td><input name=" 42" onclick="newValues('ga');" type="radio" value=
+      "RCB"></td>
+    </tr>
+
+    <tr>
+      <td>Sun May 18</td>
+
+      <td>43rd match - Hyderabad T20 v Kolkata T20</td>
+
+      <td>SRH</td>
+
+      <td><input name=" 43" onclick="newValues('hd');" type="radio" value=
+      "SRH"></td>
+
+      <td>KKR</td>
+
+      <td><input name=" 43" onclick="newValues('dh');" type="radio" value=
+      "KKR"></td>
+    </tr>
+
+    <tr>
+      <td>Mon May 19</td>
+
+      <td>44th match - Rajasthan T20 v Mumbai T20</td>
+
+      <td>RR</td>
+
+      <td><input name=" 44" onclick="newValues('fe');" type="radio" value=
+      "RR"></td>
+
+      <td>MI</td>
+
+      <td><input name=" 44" onclick="newValues('ef');" type="radio" value=
+      "MI"></td>
+    </tr>
+
+    <tr>
+      <td>Mon May 19</td>
+
+      <td>45th match - Delhi T20 v Punjab T20</td>
+
+      <td>DD</td>
+
+      <td><input name=" 45" onclick="newValues('bc');" type="radio" value=
+      "DD"></td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 45" onclick="newValues('cb');" type="radio" value=
+      "KXIP"></td>
+    </tr>
+
+    <tr>
+      <td>Tue May 20</td>
+
+      <td>46th match - Hyderabad T20 v Bangalore T20</td>
+
+      <td>SRH</td>
+
+      <td><input name=" 46" onclick="newValues('hg');" type="radio" value=
+      "SRH"></td>
+
+      <td>RCB</td>
+
+      <td><input name=" 46" onclick="newValues('gh');" type="radio" value=
+      "RCB"></td>
+    </tr>
+
+    <tr>
+      <td>Tue May 20</td>
+
+      <td>47th match - Kolkata T20 v Chennai T20</td>
+
+      <td>KKR</td>
+
+      <td><input name=" 47" onclick="newValues('da');" type="radio" value=
+      "KKR"></td>
+
+      <td>CSK</td>
+
+      <td><input name=" 47" onclick="newValues('ad');" type="radio" value=
+      "CSK"></td>
+    </tr>
+
+    <tr>
+      <td>Wed May 21</td>
+
+      <td>48th match - Punjab T20 v Mumbai T20</td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 48" onclick="newValues('ce');" type="radio" value=
+      "KXIP"></td>
+
+      <td>MI</td>
+
+      <td><input name=" 48" onclick="newValues('ec');" type="radio" value=
+      "MI"></td>
+    </tr>
+
+    <tr>
+      <td>Thu May 22</td>
+
+      <td>49th match - Kolkata T20 v Bangalore T20</td>
+
+      <td>KKR</td>
+
+      <td><input name=" 49" onclick="newValues('dg');" type="radio" value=
+      "KKR"></td>
+
+      <td>RCB</td>
+
+      <td><input name=" 49" onclick="newValues('gd');" type="radio" value=
+      "RCB"></td>
+    </tr>
+
+    <tr>
+      <td>Thu May 22</td>
+
+      <td>50th match - Chennai T20 v Hyderabad T20</td>
+
+      <td>CSK</td>
+
+      <td><input name=" 50" onclick="newValues('ah');" type="radio" value=
+      "CSK"></td>
+
+      <td>SRH</td>
+
+      <td><input name=" 50" onclick="newValues('ha');" type="radio" value=
+      "SRH"></td>
+    </tr>
+
+    <tr>
+      <td>Fri May 23</td>
+
+      <td>51st match - Mumbai T20 v Delhi T20</td>
+
+      <td>MI</td>
+
+      <td><input name=" 51" onclick="newValues('eb');" type="radio" value=
+      "MI"></td>
+
+      <td>DD</td>
+
+      <td><input name=" 51" onclick="newValues('be');" type="radio" value=
+      "DD"></td>
+    </tr>
+
+    <tr>
+      <td>Fri May 23</td>
+
+      <td>52nd match - Punjab T20 v Rajasthan T20</td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 52" onclick="newValues('cf');" type="radio" value=
+      "KXIP"></td>
+
+      <td>RR</td>
+
+      <td><input name=" 52" onclick="newValues('fc');" type="radio" value=
+      "RR"></td>
+    </tr>
+
+    <tr>
+      <td>Sat May 24</td>
+
+      <td>53rd match - Bangalore T20 v Chennai T20</td>
+
+      <td>RCB</td>
+
+      <td><input name=" 53" onclick="newValues('ga2');" type="radio" value=
+      "RCB"></td>
+
+      <td>CSK</td>
+
+      <td><input name=" 53" onclick="newValues('ag2');" type="radio" value=
+      "CSK"></td>
+    </tr>
+
+    <tr>
+      <td>Sat May 24</td>
+
+      <td>54th match - Kolkata T20 v Hyderabad T20</td>
+
+      <td>KKR</td>
+
+      <td><input name=" 54" onclick="newValues('dh2');" type="radio" value=
+      "KKR"></td>
+
+      <td>SRH</td>
+
+      <td><input name=" 54" onclick="newValues('hd2');" type="radio" value=
+      "SRH"></td>
+    </tr>
+
+    <tr>
+      <td>Sun May 25</td>
+
+      <td>55th match - Punjab T20 v Delhi T20</td>
+
+      <td>KXIP</td>
+
+      <td><input name=" 55" onclick="newValues('cb2');" type="radio" value=
+      "KXIP"></td>
+
+      <td>DD</td>
+
+      <td><input name=" 55" onclick="newValues('bc2');" type="radio" value=
+      "DD"></td>
+    </tr>
+
+    <tr>
+      <td>Sun May 25</td>
+
+      <td>56th match - Mumbai T20 v Rajasthan T20</td>
+
+      <td>MI</td>
+
+      <td><input name=" 56" onclick="newValues('ef2');" type="radio" value=
+      "MI"></td>
+
+      <td>RR</td>
+
+      <td><input name=" 56" onclick="newValues('fe2');" type="radio" value=
+      "RR"></td>
+    </tr>
+
+    
+    
+
+</table>
+
+</div> 
+
+</form>
+</div>
+
+
+
+<script type="text/javascript">
+ $(":radio").click(function(){
+   var radioName = $(this).attr("name"); 
+   $(":radio[name='"+radioName+"']").attr("disabled", true); 
+});
+</script>
+</body>
+</html>
