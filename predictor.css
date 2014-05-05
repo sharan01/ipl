@@ -453,3 +453,23 @@ overflow:hidden;
     background-color: #eee;
     -webkit-border-radius: 3px;
 	}
+/* fork me */
+
+#fork{
+	position: absolute;
+	width: 110px;
+	height: 90px;
+	top:0;
+	right:5px;
+
+}
+#fork p{
+		background: #666;
+		padding:10px 5px;
+
+}
+#fork a{
+	color: #fff;
+	text-decoration: none;
+
+}
