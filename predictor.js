@@ -98,24 +98,24 @@ function initVars() {
     teams[1] = {
         "name": "Chennai Super Kings",
         "won": 6,
-        "lost": 1,
+        "lost": 2,
         "tie":0
     };
     teams[2] = {
         "name": "Delhi Daredevils",
         "won": 2,
-        "lost": 5,
+        "lost": 6,
         "tie":0
     };
     teams[3] = {
         "name": "Kings XI Punjab",
-        "won": 5,
+        "won": 6,
         "lost": 1,
         "tie":0
     };
     teams[4] = {
         "name": "Kolkata Knight Riders",
-        "won": 2,
+        "won": 3,
         "lost": 5,
         "tie":0
     };
@@ -1060,33 +1060,31 @@ function takeScreenshot(){
     tableCanvas = document.getElementById("pointsTable");
     html2canvas(tableCanvas,{
         onrendered : function(canvas) {
-        
+            try {
+                var img = canvas.toDataURL('image/jpeg', 0.9).split(',')[1];
+            } catch(e) {
+                var img = canvas.toDataURL().split(',')[1];
+            }
 
-    try {
-        var img = canvas.toDataURL('image/jpeg', 0.9).split(',')[1];
-    } catch(e) {
-        var img = canvas.toDataURL().split(',')[1];
-    }
+            $('.screenshot').first().val("uploading");
+            //ajax
+            var fd = new FormData(); 
+            fd.append("image", img); 
+            var xhr = new XMLHttpRequest(); 
+            xhr.open("POST", "https://api.imgur.com/3/image.json");
+            xhr.onload = function() {
+                
+                var link = JSON.parse(xhr.responseText).data.link;
+                prompt("image link" ,link);
+                $('.screenshot').first().val("Take Screenshot");
 
-    $('.screenshot').first().val("uploading");
-    //ajax
-    var fd = new FormData(); 
-    fd.append("image", img); 
-    var xhr = new XMLHttpRequest(); 
-    xhr.open("POST", "https://api.imgur.com/3/image.json");
-    xhr.onload = function() {
-        
-        var link = JSON.parse(xhr.responseText).data.link;
-        prompt("image link" ,link);
-        $('.screenshot').first().val("Take Screenshot");
-
-    }
-    xhr.setRequestHeader('Authorization', 'Client-ID ddaebf76a4cf924');
-    xhr.send(fd);
+            }
+            xhr.setRequestHeader('Authorization', 'Client-ID ddaebf76a4cf924');
+            xhr.send(fd);
 
 
-    // ajax end 
-    }
+            // ajax end 
+        }
     });
 }
 
