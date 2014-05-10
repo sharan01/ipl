@@ -97,14 +97,14 @@ teams = [];
 function initVars() {
     teams[1] = {
         "name": "Chennai Super Kings",
-        "won": 6,
+        "won": 7,
         "lost": 2,
         "tie":0
     };
     teams[2] = {
         "name": "Delhi Daredevils",
         "won": 2,
-        "lost": 6,
+        "lost": 7,
         "tie":0
     };
     teams[3] = {
@@ -122,7 +122,7 @@ function initVars() {
     teams[5] = {
         "name": "Mumbai Indians",
         "won": 2,
-        "lost": 5,
+        "lost": 6,
         "tie":0
     };
     teams[6] = {
@@ -139,7 +139,7 @@ function initVars() {
     };
     teams[8] = {
         "name": "Sun Risers Hyderabad",
-        "won": 3,
+        "won": 4,
         "lost": 4,
         "tie":0
     };
