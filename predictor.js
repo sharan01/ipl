@@ -97,26 +97,26 @@ teams = [];
 function initVars() {
     teams[1] = {
         "name": "Chennai Super Kings",
-        "won": 5,
-        "lost": 1,
+        "won": 8,
+        "lost": 2,
         "tie":0
     };
     teams[2] = {
-        "name": "Delhi Daredevils",
-        "won": 2,
-        "lost": 4,
+        "name": "Delhi Capitals",
+        "won": 8,
+        "lost": 2,
         "tie":0
     };
     teams[3] = {
-        "name": "Kings XI Punjab",
-        "won": 5,
-        "lost": 1,
+        "name": "Punjab Kings",
+        "won": 4,
+        "lost": 6,
         "tie":0
     };
     teams[4] = {
         "name": "Kolkata Knight Riders",
-        "won": 2,
-        "lost": 4,
+        "won": 4,
+        "lost": 6,
         "tie":0
     };
     teams[5] = {
@@ -128,19 +128,19 @@ function initVars() {
     teams[6] = {
         "name": "Rajasthan Royals",
         "won": 4,
-        "lost": 2,
+        "lost": 6,
         "tie":0
     };
     teams[7] = {
         "name": "Royal Challengers Bangalore",
-        "won": 3,
-        "lost": 3,
+        "won": 6,
+        "lost": 4,
         "tie":0
     };
     teams[8] = {
         "name": "Sun Risers Hyderabad",
-        "won": 2,
-        "lost": 4,
+        "won": 1,
+        "lost": 8,
         "tie":0
     };
 }
@@ -186,16 +186,16 @@ Mon May 5
                         --------------*/
         if (result === "fd") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Rajasthan Royals") {
+                    if (teams[i].name === "Sun Risers Hyderabad") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Kolkata Knight Riders") {
+                    else if (teams[i].name === "Rajasthan Royals") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "df") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Rajasthan Royals") {
+                if (teams[i].name === "Delhi Capitals") {
                     teams[i].lost++;
                 }
                 else if (teams[i].name === "Kolkata Knight Riders") {
@@ -212,19 +212,19 @@ Mon May 5
                         --------------*/
         if (result === "ba") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Delhi Daredevils") {
+                    if (teams[i].name === "Mumbai Indians") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Chennai Super Kings") {
+                    else if (teams[i].name === "Punjab Kings") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "ab") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Delhi Daredevils") {
+                if (teams[i].name === "Rajasthan Royals") {
                     teams[i].lost++;
                 }
-                else if (teams[i].name === "Chennai Super Kings") {
+                else if (teams[i].name === "Royal Challenger Banglore") {
                     teams[i].won++;
                 }
             }
@@ -238,19 +238,19 @@ Tue May 6
                         --------------*/
         if (result === "eg") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Mumbai Indians") {
+                    if (teams[i].name === "Sun Risers Hyderabad") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Royal Challengers Bangalore") {
+                    else if (teams[i].name === "Chennai Super Kings") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "ge") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Mumbai Indians") {
+                if (teams[i].name === "Kolkata Knight Riders") {
                     teams[i].lost++;
                 }
-                else if (teams[i].name === "Royal Challengers Bangalore") {
+                else if (teams[i].name === "Punjab Kings") {
                     teams[i].won++;
                 }
             }
@@ -264,19 +264,19 @@ Wed May 7
                         --------------*/
         if (result === "bd") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Delhi Daredevils") {
+                    if (teams[i].name === "Mumbai Indians ") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Kolkata Knight Riders") {
+                    else if (teams[i].name === "Delhi Capitals") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "db") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Delhi Daredevils") {
+                if (teams[i].name === "Rajasthan Royals") {
                     teams[i].lost++;
                 }
-                else if (teams[i].name === "Kolkata Knight Riders") {
+                else if (teams[i].name === "Chennai Super Kings") {
                     teams[i].won++;
                 }
             }
@@ -290,19 +290,19 @@ Wed May 7
                         --------------*/
         if (result === "ca") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kings XI Punjab") {
+                    if (teams[i].name === "Royal Challenger Banglore") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Chennai Super Kings") {
+                    else if (teams[i].name === "Punjab Kings") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "ac") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kings XI Punjab") {
+                if (teams[i].name === "Kolkata Knight Riders") {
                     teams[i].lost++;
                 }
-                else if (teams[i].name === "Chennai Super Kings") {
+                else if (teams[i].name === "Sun Risers Hyderabad") {
                     teams[i].won++;
                 }
             }
@@ -316,10 +316,10 @@ Thu May 8
                         --------------*/
         if (result === "fh") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Rajasthan Royals") {
+                    if (teams[i].name === "Delhi Capitals") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Sun Risers Hyderabad") {
+                    else if (teams[i].name === "Chennai Super Kings") {
                         teams[i].lost++;
                     }
                 }
@@ -328,7 +328,7 @@ Thu May 8
                 if (teams[i].name === "Rajasthan Royals") {
                     teams[i].lost++;
                 }
-                else if (teams[i].name === "Sun Risers Hyderabad") {
+                else if (teams[i].name === "Mumbai Indians") {
                     teams[i].won++;
                 }
             }
@@ -345,16 +345,16 @@ Fri May 9
                     if (teams[i].name === "Royal Challengers Bangalore") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Kings XI Punjab") {
+                    else if (teams[i].name === "Sun Risers Hyderabad") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "cg") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Royal Challengers Bangalore") {
+                if (teams[i].name === "Chennai Super Kings") {
                     teams[i].lost++;
                 }
-                else if (teams[i].name === "Kings XI Punjab") {
+                else if (teams[i].name === "Punjab Kings") {
                     teams[i].won++;
                 }
             }
@@ -368,119 +368,15 @@ Sat May 10
                         --------------*/
         if (result === "bh") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Delhi Daredevils") {
+                    if (teams[i].name === "Kolkatta Knight Riders") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Sun Risers Hyderabad") {
+                    else if (teams[i].name === "Rajasthan Royals") {
                         teams[i].lost++;
                     }
                 }
         }else if (result === "hb") {
             for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Delhi Daredevils") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Sun Risers Hyderabad") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sat May 10
-                        --------------*/
-        if (result === "ea") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Mumbai Indians") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Chennai Super Kings") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ae") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Mumbai Indians") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Chennai Super Kings") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sun May 11
-                        --------------*/
-        if (result === "cd") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kings XI Punjab") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Kolkata Knight Riders") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "dc") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kings XI Punjab") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Kolkata Knight Riders") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sun May 11
-                        --------------*/
-        if (result === "gf") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Royal Challengers Bangalore") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Rajasthan Royals") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "fg") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Royal Challengers Bangalore") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Mon May 12
-                        --------------*/
-        if (result === "he") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Sun Risers Hyderabad") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Mumbai Indians") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "eh") {
-            for (i = 0; i < 8; i++) {
                 if (teams[i].name === "Sun Risers Hyderabad") {
                     teams[i].lost++;
                 }
@@ -489,553 +385,19 @@ Mon May 12
                 }
             }
         } 
-
-
-
-        
-         /*--------------
-Tue May 13
-                        --------------*/
-        if (result === "af") {
+ if (result === "bh") {
                 for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Chennai Super Kings") {
+                    if (teams[i].name === "Royal Challenger Banglore") {
                         teams[i].won++;
                     }
-                    else if (teams[i].name === "Rajasthan Royals") {
+                    else if (teams[i].name === "Delhi Capitals") {
                         teams[i].lost++;
                     }
                 }
-        }else if (result === "fa") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Chennai Super Kings") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].won++;
-                }
-            }
-        } 
 
 
-
-        
-         /*--------------
-Tue May 13
-                        --------------*/
-        if (result === "gb") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Royal Challengers Bangalore") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Delhi Daredevils") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "bg") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Royal Challengers Bangalore") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Delhi Daredevils") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Wed May 14
-                        --------------*/
-        if (result === "hc") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Sun Risers Hyderabad") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Kings XI Punjab") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ch") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Sun Risers Hyderabad") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Kings XI Punjab") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Wed May 14
-                        --------------*/
-        if (result === "de") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kolkata Knight Riders") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Mumbai Indians") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ed") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kolkata Knight Riders") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Mumbai Indians") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Thu May 15
-                        --------------*/
-        if (result === "fb") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Rajasthan Royals") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Delhi Daredevils") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "bf") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Delhi Daredevils") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sun May 18
-                        --------------*/
-        if (result === "ag") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Chennai Super Kings") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Royal Challengers Bangalore") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ga") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Chennai Super Kings") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Royal Challengers Bangalore") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sun May 18
-                        --------------*/
-        if (result === "hd") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Sun Risers Hyderabad") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Kolkata Knight Riders") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "dh") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Sun Risers Hyderabad") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Kolkata Knight Riders") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Mon May 19
-                        --------------*/
-        if (result === "fe") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Rajasthan Royals") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Mumbai Indians") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ef") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Mumbai Indians") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Mon May 19
-                        --------------*/
-        if (result === "bc") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Delhi Daredevils") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Kings XI Punjab") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "cb") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Delhi Daredevils") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Kings XI Punjab") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Tue May 20
-                        --------------*/
-        if (result === "hg") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Sun Risers Hyderabad") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Royal Challengers Bangalore") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "gh") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Sun Risers Hyderabad") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Royal Challengers Bangalore") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Tue May 20
-                        --------------*/
-        if (result === "da") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kolkata Knight Riders") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Chennai Super Kings") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ad") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kolkata Knight Riders") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Chennai Super Kings") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Wed May 21
-                        --------------*/
-        if (result === "ce") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kings XI Punjab") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Mumbai Indians") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ec") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kings XI Punjab") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Mumbai Indians") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Thu May 22
-                        --------------*/
-        if (result === "dg") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kolkata Knight Riders") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Royal Challengers Bangalore") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "gd") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kolkata Knight Riders") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Royal Challengers Bangalore") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Thu May 22
-                        --------------*/
-        if (result === "ah") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Chennai Super Kings") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Sun Risers Hyderabad") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ha") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Chennai Super Kings") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Sun Risers Hyderabad") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Fri May 23
-                        --------------*/
-        if (result === "eb") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Mumbai Indians") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Delhi Daredevils") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "be") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Mumbai Indians") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Delhi Daredevils") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Fri May 23
-                        --------------*/
-        if (result === "cf") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kings XI Punjab") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Rajasthan Royals") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "fc") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kings XI Punjab") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sat May 24
-                        --------------*/
-        if (result === "ga2") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Royal Challengers Bangalore") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Chennai Super Kings") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "ag2") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Royal Challengers Bangalore") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Chennai Super Kings") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sat May 24
-                        --------------*/
-        if (result === "dh2") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kolkata Knight Riders") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Sun Risers Hyderabad") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "hd2") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kolkata Knight Riders") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Sun Risers Hyderabad") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sun May 25
-                        --------------*/
-        if (result === "cb2") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Kings XI Punjab") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Delhi Daredevils") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "bc2") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Kings XI Punjab") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Delhi Daredevils") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Sun May 25
-                        --------------*/
-        if (result === "ef2") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Mumbai Indians") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Rajasthan Royals") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "fe2") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Mumbai Indians") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
-
-
-        
-         /*--------------
-Tue May 27
-                        --------------*/
-        if (result === "") {
-                for (i = 0; i < 8; i++) {
-                    if (teams[i].name === "Mumbai Indians") {
-                        teams[i].won++;
-                    }
-                    else if (teams[i].name === "Rajasthan Royals") {
-                        teams[i].lost++;
-                    }
-                }
-        }else if (result === "") {
-            for (i = 0; i < 8; i++) {
-                if (teams[i].name === "Mumbai Indians") {
-                    teams[i].lost++;
-                }
-                else if (teams[i].name === "Rajasthan Royals") {
-                    teams[i].won++;
-                }
-            }
-        } 
-
+              
+        }
 
     
     ///////////////////////////////////////////////////////////////////////////// 
